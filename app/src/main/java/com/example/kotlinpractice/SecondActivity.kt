@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import org.w3c.dom.Text
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,9 +31,9 @@ class SecondActivity : AppCompatActivity() {
             }
         }
 
-        //Create a fragment that makes a network call to some API to return a recyclerview of those items
-        //Upon pressing the button up to 20 count, it opens the fragment and we have out list to view
-        //Create a button that takes us to a third activity that holds a viewpager - MVVM arch
+        //Upon pressing the button up to 20 count, it opens the fragment and we have list items held in recyclerview
+        //Using explicit intent and getActivity() create a button in that takes us to a third
+        //activity that holds a viewpager of more general list items - MVVM arch
 
     }
 }
