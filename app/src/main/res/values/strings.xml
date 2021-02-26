@@ -5,4 +5,5 @@
     <string name="secondActivityWelcomeMssge">You\'ve made it to the second activity!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imageview">image</string>
 </resources>

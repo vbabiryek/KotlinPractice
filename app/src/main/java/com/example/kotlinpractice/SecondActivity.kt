@@ -1,4 +1,7 @@
 package com.example.kotlinpractice
+//TO-DO: Upon pressing the button up to 20 count, it opens the fragment and we have list items held in recyclerview
+//Using explicit intent and getActivity() create a button in that takes us to a third
+//activity that holds a viewpager of more general list items - MVVM arch
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -30,10 +33,5 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(this, "You've hit 20!", Toast.LENGTH_SHORT).show()
             }
         }
-
-        //Upon pressing the button up to 20 count, it opens the fragment and we have list items held in recyclerview
-        //Using explicit intent and getActivity() create a button in that takes us to a third
-        //activity that holds a viewpager of more general list items - MVVM arch
-
     }
 }
