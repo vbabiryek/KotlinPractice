@@ -14,7 +14,7 @@ interface APIRequest {
     @GET("/v2/top-headlines?sources=bbc-news&apiKey=d775b57a33d1471b8d31893ecf1d3079")
     fun getArticles(
         @Query("apikey") apiKey: String?
-    ): Call<ArticleResponse?>?
+    ): Call<ArticleResponse>
 
     companion object RestClient {
 

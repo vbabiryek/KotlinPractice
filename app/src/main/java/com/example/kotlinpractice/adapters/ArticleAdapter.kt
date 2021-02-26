@@ -12,7 +12,7 @@ import com.example.kotlinpractice.R
 import com.example.kotlinpractice.models.Article
 
 
-class ArticleAdapter(private val context: Context) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>(){
+class ArticleAdapter(val context: Context) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>(){
 
     var articleList : List<Article> = listOf()
 
@@ -22,12 +22,12 @@ class ArticleAdapter(private val context: Context) : RecyclerView.Adapter<Articl
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.title.text = articleList[position].getTitle()
-        holder.publishedAt.text = articleList[position].getPublishedAt()
-        holder.articleDesc.text = articleList[position].getDescription()
-        holder.articleContentView.text = articleList[position].getContent()
+        holder.title.text = articleList[position].title
+        holder.publishedAt.text = articleList[position].publishedAt
+        holder.articleDesc.text = articleList[position].description
+        holder.articleContentView.text = articleList[position].content
         Glide.with(context)
-                .load(articleList[position].getUrlToImage())
+                .load(articleList[position].urlToImage)
                 .into(holder.imgViewCover)
     }
 
