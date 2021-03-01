@@ -4,11 +4,16 @@ package com.example.kotlinpractice
 //activity that holds a viewpager of more general list items - MVVM arch
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import com.example.kotlinpractice.fragments.SecondActFrag
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +22,7 @@ class SecondActivity : AppCompatActivity() {
 
         val myCounter = findViewById<TextView>(R.id.counterTv)
         val myFragBtn = findViewById<Button>(R.id.openFragBtn)
+        val fragmentLayout = findViewById<FrameLayout>(R.id.secondActFragFrameLayout)
 
         val intentStr: Intent = intent
         var counterString = intentStr.getStringExtra("timesClicked")
@@ -34,6 +40,11 @@ class SecondActivity : AppCompatActivity() {
                 //TO-DO:
                 //replace view with fragment
                 //create a home button to take you back to main activity
+                val fragmentManager: FragmentManager = supportFragmentManager
+                val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+                val secondActFrag = SecondActFrag()
+                fragmentTransaction.add(secondActFrag, "secondActFrag")
+                fragmentTransaction.commit()
             }
         }
     }

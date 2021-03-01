@@ -25,7 +25,7 @@ class SecondActFrag : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
 
-        recyclerView = view?.findViewById(R.id.myRecyclerView)!!
+        recyclerView = view?.findViewById(R.id.myRecyclerView)!! //TO-DO: Figure out why line 28 produces NPE
         articleAdapter = ArticleAdapter(requireContext())
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = articleAdapter
