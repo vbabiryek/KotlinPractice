@@ -37,13 +37,12 @@ class SecondActivity : AppCompatActivity() {
             timesClicked += 1
             if(timesClicked == 20){
                 Toast.makeText(this, "You've hit 20!", Toast.LENGTH_SHORT).show()
-                //TO-DO:
-                //replace view with fragment
-                //create a home button to take you back to main activity
                 val fragmentManager: FragmentManager = supportFragmentManager
                 val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
                 val secondActFrag = SecondActFrag()
-                fragmentTransaction.add(secondActFrag, "secondActFrag")
+                fragmentTransaction.replace(R.id.content, secondActFrag)
+
+                println("fragmentTransaction" + fragmentTransaction.isEmpty)
                 fragmentTransaction.commit()
             }
         }

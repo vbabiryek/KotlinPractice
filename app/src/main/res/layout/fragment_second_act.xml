@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-tools:context=".fragments.SecondActFrag">
+<FrameLayout
+    android:id="@+id/secondActFragFrameLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.SecondActFrag"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
-<RelativeLayout
-    android:id="@+id/titleConstraint"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -15,5 +17,5 @@ tools:context=".fragments.SecondActFrag">
        android:layout_width="match_parent"
        android:layout_height="match_parent"/>
 
-</RelativeLayout>
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

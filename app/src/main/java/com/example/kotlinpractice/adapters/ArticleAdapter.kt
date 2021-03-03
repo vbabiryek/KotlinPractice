@@ -12,7 +12,7 @@ import com.example.kotlinpractice.R
 import com.example.kotlinpractice.models.Article
 
 
-class ArticleAdapter(val context: Context) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>(){
+class ArticleAdapter(private val context: Context) : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>(){
 
     var articleList : List<Article> = listOf()
 
@@ -32,6 +32,7 @@ class ArticleAdapter(val context: Context) : RecyclerView.Adapter<ArticleAdapter
     }
 
     override fun getItemCount(): Int {
+        println("articleList size is: " + articleList.size)
         return articleList.size
     }
 
